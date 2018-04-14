@@ -1,4 +1,5 @@
 auth-service/auth-rsoi/
-.idea/
+auth-service/auth_service/migrations/__pycache__/
 
+.idea/
 *.pyc
