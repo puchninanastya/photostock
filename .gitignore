@@ -1,5 +1,6 @@
 auth-service/auth_service/migrations/__pycache__/
 images-storage-service/images_storage_service/migrations/__pycache__/
+statistics-service/statistics_service/migrations/__pycache__/
 
 dips_django_env/
 *.pyc
