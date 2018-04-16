@@ -127,5 +127,5 @@ STATIC_URL = '/static/'
 REST_FRAMEWORK = {
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
     'PAGE_SIZE': 5,
-    'EXCEPTION_HANDLER': 'user_service.utils.custom_exception_handler',
+    'EXCEPTION_HANDLER': 'auth_service.utils.custom_exception_handler',
 }

@@ -1,3 +1,7 @@
 from django.contrib import admin
 
-# Register your models here.
+from .models import UserProfile, UserToken, AppToken
+
+admin.site.register(UserProfile)
+admin.site.register(UserToken)
+admin.site.register(AppToken)

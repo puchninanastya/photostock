@@ -45,6 +45,7 @@ class AppToken(models.Model):
 class UserProfile(models.Model):
     user = models.OneToOneField(
         User,
+        related_name='user_profile',
         on_delete=models.CASCADE)
     instagram_username = models.CharField(
         blank=True,
