@@ -24,7 +24,7 @@ class UserSerializer(serializers.ModelSerializer):
             'user_profile', 'password')
 
     def create(self, validated_data):
-        profile_data = validated_data.pop('profile')
+        user_profile_data = validated_data.pop('user_profile')
         user = User.objects.create(**validated_data)
         if user is not None:
             password = validated_data.get('password', None)
@@ -34,14 +34,14 @@ class UserSerializer(serializers.ModelSerializer):
             else:
                 print('pw id none')
         user.save()
-        UserProfile.objects.create(user=user, **profile_data)
+        UserProfile.objects.create(user=user, **user_profile_data)
         return user
 
     def update(self, instance, validated_data):
         # retrieve the UserProfile
-        profile_data = validated_data.pop('profile', None)
-        for attr, value in profile_data.items():
-            setattr(instance.profile, attr, value)
+        user_profile_data = validated_data.pop('user_profile', None)
+        for attr, value in user_profile_data.items():
+            setattr(instance.user_profile, attr, value)
 
         # retrieve the User
         for attr, value in validated_data.items():
@@ -50,6 +50,6 @@ class UserSerializer(serializers.ModelSerializer):
         if new_password is not None:
             instance.set_password(new_password)
 
-        instance.profile.save()
+        instance.user_profile.save()
         instance.save()
         return instance
