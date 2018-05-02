@@ -77,8 +77,12 @@ WSGI_APPLICATION = 'galleries_service_project.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'photostock_galleries',
+        'USER': 'photostock_admin',
+        'PASSWORD': 'dipsdips',
+        'HOST': 'localhost',
+        'PORT': '5433',
     }
 }
 
