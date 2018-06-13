@@ -7,6 +7,7 @@ from rest_framework import status
 from .models import UserPhotoInfo
 from .serializers import UserPhotoInfoSerializer
 
+
 class UserPhotosInfoList(APIView):
     def get(self, request):
         photos_info = UserPhotoInfo.objects.all()

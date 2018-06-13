@@ -1,0 +1,16 @@
+{
+  "name": "images-storage-service",
+  "version": "1.0.0",
+  "description": "Images storage service for photostock",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Puchnina Anastasia",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "cloudinary": "^1.11.0",
+    "express": "^4.16.3"
+  }
+}
